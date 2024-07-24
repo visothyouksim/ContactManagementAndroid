@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         val phoneEditText = findViewById<EditText>(R.id.phone)
         val addressEditText = findViewById<EditText>(R.id.address)
         val addButton = findViewById<Button>(R.id.addButton)
-Vi
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         contactAdapter = ContactAdapter(contactList)

@@ -93,4 +93,31 @@
             android:textColor="@android:color/black"
             android:text="123 Rue Exemple, Ville, Pays" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifier"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:backgroundTintMode="src_in"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Supprimer"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:backgroundTintMode="src_in" />
+    </LinearLayout>
 </LinearLayout>

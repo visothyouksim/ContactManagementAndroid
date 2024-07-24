@@ -1,5 +1,6 @@
 package com.example.contactmanagementandroid;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,8 +29,19 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
     @Override
     public void onBindViewHolder(@NonNull ContactViewHolder holder, int position) {
         Contact contact = contactList.get(position);
-        holder.fullName.setText(contact.getFirstName() + " " + contact.getLastName());
+        String fullName = contact.getFirstName() + " " + contact.getLastName();
+        holder.fullName.setText(fullName);
+
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), ContactDetailActivity.class);
+            intent.putExtra("fullName", fullName);
+            intent.putExtra("email", contact.getEmail());
+            intent.putExtra("phone", contact.getPhone());
+            intent.putExtra("address", contact.getAddress());
+            view.getContext().startActivity(intent);
+        });
     }
+
 
     @Override
     public int getItemCount() {
